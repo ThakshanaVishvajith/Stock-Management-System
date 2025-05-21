@@ -1,0 +1,996 @@
+/* ------------------------------------------------------------------ */
+/* 🧾 LOGIN PAGE STYLES */
+/* ------------------------------------------------------------------ */
+
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-box {
+  display: flex;
+  width: 850px;
+  max-width: 95%;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-box {
+  flex: 1;
+  padding: 40px 30px;
+  background-color: #ffffff;
+}
+
+.form-box h1 {
+  font-size: 24px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-box form h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.form-box input {
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-btn {
+  padding: 12px;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #2563eb;
+}
+
+.signup-section {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.signup-section p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.signup-section a {
+  color: #3b82f6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.google-btn,
+.facebook-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google-btn {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+}
+
+.google-btn img {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.facebook-btn {
+  background-color: #1877f2;
+  color: white;
+}
+
+.facebook-btn img {
+  width: 20px;
+  margin-right: 8px;
+  filter: invert(100%);
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.image-box {
+  flex: 1;
+  background-color: #e6f1fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+.select-input {
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  color: #333;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* ------------------------------------------------------------------ */
+/* 📦 PRODUCTS & USERS PAGE STYLES (Shared) */
+/* ------------------------------------------------------------------ */
+
+.products-page,
+.users-page {
+  padding: 30px;
+  background-color: #f5f8fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Form Styles */
+.add-product-form,
+.add-user-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 30px;
+}
+
+.add-product-form input,
+.add-user-form input,
+.add-user-form select {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 160px;
+}
+
+.add-product-form button,
+.add-user-form button {
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-product-form button:hover,
+.add-user-form button:hover {
+  background-color: #1e40af;
+}
+
+/* Tables */
+.product-table,
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.product-table th,
+.user-table th,
+.product-table td,
+.user-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.product-table th,
+.user-table th {
+  background-color: #f0f4f8;
+  font-weight: 600;
+  color: #374151;
+}
+
+.product-table tr:hover,
+.user-table tr:hover {
+  background-color: #f9fbfd;
+}
+
+/* 🎨 Action Buttons (shared) */
+.product-table button,
+.user-table button {
+  padding: 6px 10px;
+  margin-right: 6px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #facc15;
+  color: #000;
+}
+.edit-btn:hover {
+  background-color: #eab308;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: #fff;
+}
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.save-btn {
+  background-color: #10b981;
+  color: #fff;
+}
+.save-btn:hover {
+  background-color: #059669;
+}
+
+.cancel-btn {
+  background-color: #94a3b8;
+  color: #fff;
+}
+.cancel-btn:hover {
+  background-color: #64748b;
+}
+
+/* ------------------------------------------------------------------ */
+/* 📊 ADMIN DASHBOARD STYLES */
+/* ------------------------------------------------------------------ */
+
+.admin-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 101;
+  
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.sidebar-menu li.active,
+.sidebar-menu li:hover {
+  background-color: #34495e;
+  border-radius: 4px;
+}
+
+.sidebar-user {
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.logout-link {
+  color: #f44336;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logout-link:hover {
+  background-color: #c62828;
+  color: #fff;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 30px;
+  background-color: #f4f6f8;
+  margin-left: 220px;
+}
+.dashboard-main h1 {
+  margin-bottom: 25px;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-icon {
+  font-size: 28px;
+}
+
+.card-content h3 {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3b82f6;
+  margin: 5px 0 0;
+}
+/* ------------------------------------------------------------------ */
+/* 🧾 SUPPLIERS PAGE STYLES */
+/* ------------------------------------------------------------------ */
+
+.suppliers-page {
+  padding: 30px;
+  background-color: #f5f8fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.add-supplier-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 30px;
+}
+
+.add-supplier-form input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 180px;
+}
+
+.add-supplier-form button {
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-supplier-form button:hover {
+  background-color: #1e40af;
+}
+
+.supplier-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.supplier-table th,
+.supplier-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.supplier-table th {
+  background-color: #f0f4f8;
+  font-weight: 600;
+  color: #374151;
+}
+
+.supplier-table tr:hover {
+  background-color: #f9fbfd;
+}
+
+/* 🎨 Shared Button Styles */
+.supplier-table button {
+  padding: 6px 10px;
+  margin-right: 6px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+  background-color: #facc15;
+  color: #000;
+}
+
+.edit-btn:hover {
+  background-color: #eab308;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.save-btn {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: #059669;
+}
+
+.cancel-btn {
+  background-color: #94a3b8;
+  color: #fff;
+}
+
+.cancel-btn:hover {
+  background-color: #64748b;
+}
+
+/* 📦 Purchase Orders */
+.products-page {
+  padding: 30px;
+  background-color: #f5f8fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.products-page h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Supplier & Product Dropdowns */
+.products-page select,
+.products-page input[type="number"] {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 160px;
+}
+
+/* Add + Purchase Buttons */
+.products-page button {
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.products-page .save-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.products-page .save-btn:hover {
+  background-color: #059669;
+}
+
+.products-page .delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.products-page .delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Item Table */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.user-table th {
+  background-color: #f0f4f8;
+  font-weight: 600;
+  color: #374151;
+}
+
+.user-table tr:hover {
+  background-color: #f9fbfd;
+}
+
+/* Invoice Section */
+.invoice-box {
+  background: #fff;
+  padding: 20px;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.invoice-box h3 {
+  margin-bottom: 15px;
+  color: #2563eb;
+}
+
+.invoice-box p {
+  margin: 4px 0;
+  color: #333;
+}
+
+
+
+/*stock page*/
+
+.stock-page {
+  max-width: 900px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.stock-page h2 {
+  margin-bottom: 24px;
+}
+
+.stock-page label {
+  font-weight: 500;
+  margin-right: 8px;
+}
+
+.stock-page select, .stock-page button, .stock-page input[type="number"] {
+  margin-right: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+}
+
+.stock-page button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.stock-page button:hover {
+  background: #125ea2;
+}
+
+.stock-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background: #fafbfc;
+}
+
+.stock-page th, .stock-page td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.stock-page th {
+  background: #f4f6f8;
+  font-weight: 600;
+}
+
+.stock-page tr:hover {
+  background: #f1f7ff;
+}
+
+.stock-page input[type="number"] {
+  width: 70px;
+}
+
+/*purchase order page*/
+
+/* Add to Management.css */
+.po-section-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 24px 20px;
+  margin-bottom: 28px;
+}
+.po-section-card h3 {
+  margin-top: 0;
+  color: #2563eb;
+  margin-bottom: 18px;
+}
+
+.po-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.po-message {
+  margin-bottom: 18px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+.po-message.success { background: #e0f7fa; color: #00796b; }
+.po-message.error { background: #ffebee; color: #c62828; }
+
+
+.product-table tr:hover {
+  background-color: #e3f2fd;
+}
+.po-action-btn {
+  margin-top: 12px;
+  margin-right: 8px;
+}
+
+
+/* Section card for visual grouping */
+.po-section-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 24px 20px;
+  margin-bottom: 28px;
+}
+
+/* Grid for form fields */
+.po-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+/* Table enhancements */
+.products-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  background: #fafbfc;
+}
+.products-page th, .products-page td {
+  padding: 10px 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.products-page th {
+  background: #f4f6f8;
+  font-weight: 600;
+}
+.products-page tr:hover {
+  background: #e3f2fd;
+}
+.products-page button {
+  margin: 4px 2px;
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.products-page button:hover {
+  background: #125ea2;
+}
+
+/* customre page */ 
+
+
+
+/* Customer Page Styles */
+.customers-page {
+  padding: 30px;
+  background-color: #f5f8fa;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.add-customer-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: 30px;
+}
+
+.add-customer-form input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 160px;
+}
+
+.add-customer-form button {
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-customer-form button:hover {
+  background-color: #1e40af;
+}
+
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.customer-table th,
+.customer-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.customer-table th {
+  background-color: #f0f4f8;
+  font-weight: 600;
+  color: #374151;
+}
+
+.customer-table tr:hover {
+  background-color: #f9fbfd;
+}
+
+/* 🎨 Action Buttons (shared) */
+.customer-table button {
+  padding: 6px 10px;
+  margin-right: 6px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+
+
+
+/*For a more professional print, use CSS: */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #invoice-section, #invoice-section * {
+    visibility: visible;
+  }
+  #invoice-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    background: #fff;
+  }
+}
+
+ /*media queries for responsiveness*/
+@media (max-width: 900px) {
+  .admin-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 12px 0;
+    z-index: 101;
+  }
+  .dashboard-main {
+    margin-left: 0;
+    padding: 16px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .product-table,
+  .user-table,
+  .supplier-table,
+  .customer-table,
+  .products-page table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .product-table th,
+  .product-table td,
+  .user-table th,
+  .user-table td,
+  .supplier-table th,
+  .supplier-table td,
+  .customer-table th,
+  .customer-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 700px) {
+  .po-form-grid,
+  .add-product-form,
+  .add-user-form,
+  .add-supplier-form,
+  .add-customer-form {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .products-page,
+  .users-page,
+  .suppliers-page,
+  .customers-page {
+    padding: 10px;
+  }
+  .po-section-card,
+  .stock-page {
+    padding: 10px;
+  }
+  h2, h3 {
+    font-size: 18px;
+  }
+}
+
+img, .App-logo {
+  max-width: 100%;
+  height: auto;
+}
+
+
+@media (max-width: 500px) {
+  button,
+  input,
+  select,
+  textarea {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
